@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#211416">
+  <title>Một nhà, một trái tim · Gemus 20/10</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="heart-layout.js"></script>
+  <script defer src="heart.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body data-view="heart">
+  <div id="stage" aria-label="Trái tim tương tác"><div id="heart-labels" aria-label="Các thành viên trên trái tim"></div></div>
+  <header class="brand"><a href="./" aria-label="Gemus — về trái tim chung">gemus<span>NHỮNG NGƯỜI CHUNG MỘT NHÀ</span></a><span class="date">20 / 10</span></header>
+  <main>
+    <section id="select-view" class="screen selection" hidden aria-labelledby="select-title">
+      <div class="intro"><p class="eyebrow">GỬI NHỮNG CÔ GÁI CỦA GEMUS</p><h1 id="select-title">Một nhà.<br>Một <em>trái tim.</em></h1><p>Mỗi người một sắc màu.<br>Cùng nhau, chúng mình làm nên điều thật đẹp.</p></div>
+      <div class="picker"><button id="back-heart" class="text-button">← Về trái tim</button><div class="picker-heading"><h2>Hôm nay, món quà này dành cho bạn.</h2><p>Tìm tên mình để mở một chút yêu thương nhé.</p></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Tìm tên của bạn…" autocomplete="off" aria-label="Tìm tên của bạn"></label>
+        <p id="preview-note" class="preview-note" hidden>Bản xem thử · Tên và lời nhắn đang dùng dữ liệu minh họa.</p>
+        <p id="status" role="status">Đang chuẩn bị những món quà…</p>
+        <div id="members" class="members" aria-label="Chọn người nhận"></div>
+        <button id="retry" class="text-button" hidden>Thử tải lại</button>
+      </div>
+      <footer>MỘT MÓN QUÀ NHỎ · MỘT TÌNH CẢM THẬT LỚN</footer>
+    </section>
+    <section id="gift-view" class="screen centered" hidden aria-labelledby="gift-title">
+      <p class="eyebrow">CÓ MỘT ĐIỀU MUỐN GỬI ĐẾN</p><h1 id="gift-title" tabindex="-1"></h1><p class="gift-subtitle">Cảm ơn bạn vì đã là một phần của ngôi nhà này.</p>
+      <div class="gift-space" aria-hidden="true"></div>
+      <button id="open-gift" class="primary">Chạm để mở quà <span aria-hidden="true">↗</span></button>
+      <button id="choose-again" class="text-button">Chọn lại tên</button>
+    </section>
+    <section id="letter-view" class="letter-screen" hidden aria-labelledby="letter-title">
+      <button id="close-letter" class="close" aria-label="Đóng thiệp và ngắm trái tim chung">✕</button>
+      <article class="letter"><div class="portrait-wrap"><span class="portrait-caption">MỘT MẢNH GHÉP THẬT ĐẶC BIỆT</span><img id="letter-photo" alt=""><span class="portrait-date">20.10</span></div>
+      <div class="letter-copy"><p class="eyebrow">GỬI BẠN, VỚI THẬT NHIỀU YÊU THƯƠNG</p><h1 id="letter-title" tabindex="-1"></h1>
+      <p class="common-wish">Chúc những cô gái của Gemus một ngày 20/10 thật dịu dàng và nhiều niềm vui. Cảm ơn vì những lần cùng tập, cùng cười và cùng làm nên một ngôi nhà đầy ắp yêu thương.</p>
+      <div class="personal"><span>Một lời nhắn dành riêng cho bạn</span><p id="personal-wish"></p></div>
+      <p class="signature">Thương mến,<br><em>Ngôi nhà Gemus</em></p>
+      <button id="explore" class="primary">Về trái tim chung <span aria-hidden="true">↗</span></button></div></article>
+    </section>
+    <section id="heart-view" class="screen together" aria-labelledby="heart-title">
+      <div><p class="eyebrow">DÙ MỖI NGƯỜI LÀ MỘT ĐỐM SÁNG NHỎ</p><h1 id="heart-title" tabindex="-1">Cùng nhau,<br>mình là <em>một nhà.</em></h1></div>
+      <div class="together-bottom"><p>Một trái tim. Tất cả chúng mình.</p><span class="gesture">VUỐT ĐỂ XOAY · HAI NGÓN ĐỂ ZOOM · CHẠM TÊN ĐỂ MỞ THIỆP</span><div class="zoom-controls" aria-label="Điều chỉnh trái tim"><button id="zoom-out" aria-label="Thu nhỏ trái tim">−</button><button id="zoom-reset" aria-label="Đặt lại góc nhìn">Về giữa</button><button id="zoom-in" aria-label="Phóng to trái tim">+</button></div><p id="heart-status" role="status">Đang thắp sáng những món quà…</p><button id="heart-retry" class="text-button" hidden>Thử tải lại</button><button id="find-member" class="text-button">Tìm nhanh tên bạn</button><button id="read-again" class="text-button" hidden>Đọc lại thiệp vừa mở</button></div>
+    </section>
+  </main>
+  <noscript>Hãy bật JavaScript để chọn tên và mở thiệp của bạn.</noscript>
+</body>
+</html>

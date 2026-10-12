@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyễn Thị An",
+    "avatar": "avatars/001.jpg",
+    "wish": "Chúc An một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 2,
+    "name": "Trần Minh Anh",
+    "avatar": "avatars/002.jpg",
+    "wish": "Chúc Anh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 3,
+    "name": "Lê Thu Bình",
+    "avatar": "avatars/003.jpg",
+    "wish": "Chúc Bình một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 4,
+    "name": "Phạm Ngọc Châu",
+    "avatar": "avatars/004.jpg",
+    "wish": "Chúc Châu một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 5,
+    "name": "Hoàng Khánh Chi",
+    "avatar": "avatars/005.jpg",
+    "wish": "Chúc Chi một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 6,
+    "name": "Vũ Thùy Dung",
+    "avatar": "avatars/006.jpg",
+    "wish": "Chúc Dung một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 7,
+    "name": "Đặng Hà Giang",
+    "avatar": "avatars/007.jpg",
+    "wish": "Chúc Giang một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 8,
+    "name": "Bùi Mai Hân",
+    "avatar": "avatars/008.jpg",
+    "wish": "Chúc Hân một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 9,
+    "name": "Đỗ Lan Hương",
+    "avatar": "avatars/009.jpg",
+    "wish": "Chúc Hương một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 10,
+    "name": "Ngô Phương Khánh",
+    "avatar": "avatars/010.jpg",
+    "wish": "Chúc Khánh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 11,
+    "name": "Dương Bảo Linh",
+    "avatar": "avatars/011.jpg",
+    "wish": "Chúc Linh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 12,
+    "name": "Lý Diệu My",
+    "avatar": "avatars/012.jpg",
+    "wish": "Chúc My một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 13,
+    "name": "Võ Thanh Nga",
+    "avatar": "avatars/013.jpg",
+    "wish": "Chúc Nga một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 14,
+    "name": "Phan Kim Ngân",
+    "avatar": "avatars/014.jpg",
+    "wish": "Chúc Ngân một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 15,
+    "name": "Trịnh Hồng Nhung",
+    "avatar": "avatars/015.jpg",
+    "wish": "Chúc Nhung một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 16,
+    "name": "Huỳnh Gia Như",
+    "avatar": "avatars/016.jpg",
+    "wish": "Chúc Như một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 17,
+    "name": "Mai Thảo Nguyên",
+    "avatar": "avatars/017.jpg",
+    "wish": "Chúc Nguyên một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 18,
+    "name": "Tô Yến Oanh",
+    "avatar": "avatars/018.jpg",
+    "wish": "Chúc Oanh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 19,
+    "name": "Châu Bích Phượng",
+    "avatar": "avatars/019.jpg",
+    "wish": "Chúc Phượng một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 20,
+    "name": "Lâm Quỳnh Trang",
+    "avatar": "avatars/020.jpg",
+    "wish": "Chúc Trang một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 21,
+    "name": "Đinh Thu Thủy",
+    "avatar": "avatars/021.jpg",
+    "wish": "Chúc Thủy một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 22,
+    "name": "Cao Tuyết Vy",
+    "avatar": "avatars/022.jpg",
+    "wish": "Chúc Vy một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 23,
+    "name": "Lương Ánh Xuân",
+    "avatar": "avatars/023.jpg",
+    "wish": "Chúc Xuân một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 24,
+    "name": "Hồ Bảo Yến",
+    "avatar": "avatars/024.jpg",
+    "wish": "Chúc Yến một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 25,
+    "name": "Tạ Diễm Quỳnh",
+    "avatar": "avatars/025.jpg",
+    "wish": "Chúc Quỳnh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 26,
+    "name": "Kiều Mỹ Duyên",
+    "avatar": "avatars/026.jpg",
+    "wish": "Chúc Duyên một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 27,
+    "name": "Thái Hải Yến",
+    "avatar": "avatars/027.jpg",
+    "wish": "Chúc Yến một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 28,
+    "name": "Quách Ngọc Hà",
+    "avatar": "avatars/028.jpg",
+    "wish": "Chúc Hà một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 29,
+    "name": "Nghiêm Thanh Tâm",
+    "avatar": "avatars/029.jpg",
+    "wish": "Chúc Tâm một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  },
+  {
+    "id": 30,
+    "name": "Văn Cẩm Tú",
+    "avatar": "avatars/030.jpg",
+    "wish": "Chúc Tú một ngày 20/10 thật vui và ngập tràn yêu thương!"
+  }
+]
