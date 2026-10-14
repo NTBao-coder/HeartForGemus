@@ -58,10 +58,10 @@ export const heartMap = {
 - Vuốt/kéo để xoay, chụm hai ngón hoặc cuộn chuột để zoom; có nút +/− và đặt lại góc nhìn.
 - Chạm tên mở thẳng thiệp toàn màn hình, có ảnh tách nền, lời chúc chung và lời nhắn riêng. Đóng thiệp quay lại góc nhìn/zoom trước đó.
 - Nút tìm nhanh mở danh sách tên như lối phụ; người xem có thể mở thiệp của bất kỳ tên nào. Hướng này thay thế lựa chọn chỉ xem thiệp của mình trước đó.
-- Tên và lời nhắn đang dùng bộ xem thử `members-preview.json`; chờ danh sách thật. Chưa triển khai công khai hoặc tạo QR.
+- Hiện dùng 33 ảnh thật trong `members.json`; tên có dấu và lời nhắn riêng chờ hoàn thiện. Đã triển khai GitHub Pages tại https://ntbao-coder.github.io/HeartForGemus/; chưa tạo QR.
 - Đã kiểm tra cú pháp JS, luồng chọn tên/mở/đóng thiệp bằng DOM mô phỏng, cùng thao tác chạm/kéo/pinch và giới hạn zoom bằng kiểm tra sự kiện. Chưa kiểm tra trực quan trên điện thoại thật.
 
-### Kiểm tra mật độ 25 người
+### Giai đoạn thử mật độ 25 người (đã thay bằng 33 người)
 - Bộ xem thử có 25 ID/tên minh họa, dùng lặp ảnh có sẵn; chưa gán tên thật.
 - Tăng diện tích cảnh tim và đưa camera gần hơn; vị trí thành viên phân bố trên cả bề mặt, ổn định giữa các lần tải.
 - Sắp xếp nhãn theo tọa độ màn hình, tránh chồng tên/vùng chạm 44px; ưu tiên đốm đang tìm, phần phía sau không nhận chạm. Khi quá sát nhau, ẩn bớt điểm tương tác; xoay/zoom hoặc tìm nhanh để tiếp cận.

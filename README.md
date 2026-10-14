@@ -34,3 +34,25 @@ node heart-2010/tests/layout.test.cjs
 ```
 
 Script giữ tên/lời chúc đã sửa cho cùng file nguồn, tạo ảnh tối ưu có mã phiên bản theo nội dung và đồng bộ thêm/bớt ảnh. Chỉnh tên có dấu và lời chúc tại `members.json`. Đổi tên file nguồn được xem là một thành viên mới.
+
+## Tiếp tục trên máy khác
+
+Website đang hoạt động: https://ntbao-coder.github.io/HeartForGemus/
+
+```sh
+git clone https://github.com/NTBao-coder/HeartForGemus.git
+cd HeartForGemus
+python3 -m http.server 4173 --directory heart-2010
+```
+
+Mở http://localhost:4173. Nếu đã clone trước đó, dùng `git pull --ff-only origin main` khi không có thay đổi cục bộ chưa lưu. Không cần npm install; Node.js chỉ cần để chạy các bài kiểm tra.
+
+Công việc tiếp theo:
+
+1. Điền tên đúng theo ảnh trong [Ten.md](./Ten.md), rồi cập nhật trường `name` trong `heart-2010/members.json`.
+2. Soạn lời chúc riêng vào trường `wish` của từng người.
+3. Kiểm tra xoay, zoom và mở thiệp trên điện thoại thật, sau đó tạo QR từ link công khai ở trên.
+
+Ảnh tối ưu đã được lưu trong Git, máy khác có thể chạy web ngay. Script đồng bộ ảnh dùng `sips` của macOS; Windows/Linux vẫn chạy web và sửa tên/lời chúc bình thường, nhưng cần thay công cụ xử lý ảnh nếu muốn chạy lại script.
+
+GitHub Pages tự triển khai khi push nhánh `main`. Nếu tab còn hiển thị bản cũ, tải lại trang. Đã xác nhận trực tiếp trên Safari: danh sách 33 người và thiệp An Tran dùng ảnh mới; kiểm tra toàn diện trên điện thoại vẫn còn cần thực hiện.
