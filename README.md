@@ -22,3 +22,15 @@ Mở http://127.0.0.1:4173 trong trình duyệt. Đây là địa chỉ trên m�
 - QR chung và chọn tên không xác thực danh tính. Bất kỳ ai cũng có thể chạm một tên để xem thiệp tương ứng; dữ liệu thiệp trong website tĩnh không phải dữ liệu riêng tư được bảo vệ.
 
 Kiểm tra bố trí nhãn: `node heart-2010/tests/layout.test.cjs`. Tìm nhanh sẽ đưa đốm sáng ra trước để chạm mở thiệp.
+
+## Cập nhật ảnh và danh sách
+
+Sau khi thay ảnh trong `heart-2010/avatars`, chạy trên macOS:
+
+```sh
+python3 heart-2010/scripts/sync-members.py
+node heart-2010/tests/members.test.cjs
+node heart-2010/tests/layout.test.cjs
+```
+
+Script giữ tên/lời chúc đã sửa cho cùng file nguồn, tạo ảnh tối ưu có mã phiên bản theo nội dung và đồng bộ thêm/bớt ảnh. Chỉnh tên có dấu và lời chúc tại `members.json`. Đổi tên file nguồn được xem là một thành viên mới.

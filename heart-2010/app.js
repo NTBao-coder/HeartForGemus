@@ -2,7 +2,7 @@
   'use strict';
   const $ = id => document.getElementById(id);
   let members = [], selected = null;
-  const views = ['select', 'gift', 'letter', 'heart'];
+  const views = ['select', 'letter', 'heart'];
   const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').toLowerCase();
   function show(view) {
     views.forEach(name => { $(name + '-view').hidden = name !== view; });
@@ -12,11 +12,21 @@
     const title = $(view + '-title');
     if (title) { title.setAttribute('tabindex', '-1'); title.focus({ preventScroll: true }); }
   }
-  function imageFallback(img) {
-    img.addEventListener('error', () => {
-      img.hidden = true;
-      img.parentElement.classList.add('missing-photo');
-    }, { once: true });
+  function setMemberImage(img, member, thumbnail = false) {
+    // Replace the handler on each selection; never accumulate handlers from old cards.
+    img.hidden = false;
+    img.parentElement.classList.remove('missing-photo');
+    let fallbackUsed = false;
+    img.onerror = () => {
+      if (!fallbackUsed && member.sourceAvatar) {
+        fallbackUsed = true;
+        img.src = member.sourceAvatar;
+      } else {
+        img.hidden = true;
+        img.parentElement.classList.add('missing-photo');
+      }
+    };
+    img.src = thumbnail ? (member.thumbnail || member.avatar) : member.avatar;
   }
   function render() {
     const query = normalize($('search').value.trim());
@@ -27,9 +37,9 @@
       const button = document.createElement('button');
       button.className = 'member';
       const photo = document.createElement('span'); photo.className = 'member-photo';
-      const img = document.createElement('img'); img.src = member.thumbnail || member.avatar; img.alt = ''; img.loading = 'lazy'; imageFallback(img);
+      const img = document.createElement('img'); img.alt = ''; img.loading = 'lazy';
       const name = document.createElement('span'); name.className = 'member-name'; name.textContent = member.name;
-      photo.append(img); button.append(photo, name);
+      photo.append(img); setMemberImage(img, member, true); button.append(photo, name);
       button.addEventListener('click', () => {
         selected = member;
         if (window.gemusHeart.focusMember?.(member.id)) {
@@ -48,14 +58,13 @@
       const configResponse = await fetch('site-config.json', { cache: 'no-cache' });
       if (!configResponse.ok) throw new Error('Could not load configuration');
       const config = await configResponse.json();
-      $('preview-note').hidden = !config.preview;
       const response = await fetch(config.membersFile || 'members.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('Could not load members');
       const data = await response.json();
       if (!Array.isArray(data) || !data.length || data.some(m => !m.name || !m.avatar || typeof m.wish !== 'string')) throw new Error('Invalid member data');
       members = data; render();
       window.gemusHeart.setMembers(members, member => { selected = member; openLetter(); });
-      $('heart-status').textContent = config.preview ? `Bản xem thử ${members.length} người · Ảnh lặp, tên và lời nhắn minh họa` : 'Tìm đốm sáng mang tên bạn nhé.';
+      $('heart-status').textContent = `${members.length} thành viên · Tìm đốm sáng mang tên bạn nhé.`;
     } catch (error) {
       $('status').textContent = 'Chưa tải được danh sách. Bạn kiểm tra kết nối rồi thử lại nhé.';
       $('retry').hidden = false;
@@ -69,8 +78,7 @@
     $('personal-wish').textContent = selected.wish;
     $('personal-note').hidden = !selected.wish.trim();
     const img = $('letter-photo');
-    img.hidden = false; img.parentElement.classList.remove('missing-photo');
-    img.alt = selected.name; imageFallback(img); img.src = selected.avatar;
+    img.alt = selected.name; setMemberImage(img, selected);
     $('read-again').hidden = false;
     show('letter');
   }
@@ -79,8 +87,6 @@
   $('heart-retry').addEventListener('click', load);
   $('search').addEventListener('input', render);
   $('retry').addEventListener('click', load);
-  $('choose-again').addEventListener('click', () => show('select'));
-  $('open-gift').addEventListener('click', openLetter);
   $('read-again').addEventListener('click', openLetter);
   $('close-letter').addEventListener('click', () => show('heart'));
   $('explore').addEventListener('click', () => show('heart'));
