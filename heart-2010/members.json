@@ -1,182 +1,266 @@
 [
   {
-    "id": 1,
-    "name": "Nguyễn Thị An",
-    "avatar": "avatars/001.jpg",
-    "wish": "Chúc An một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "antran",
+    "name": "An Tran",
+    "avatar": "assets/members/antran.jpg",
+    "thumbnail": "assets/members/antran-thumb.jpg",
+    "sourceAvatar": "avatars/AnTran.jpg",
+    "wish": ""
   },
   {
-    "id": 2,
-    "name": "Trần Minh Anh",
-    "avatar": "avatars/002.jpg",
-    "wish": "Chúc Anh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "baothi",
+    "name": "Bao Thi",
+    "avatar": "assets/members/baothi.jpg",
+    "thumbnail": "assets/members/baothi-thumb.jpg",
+    "sourceAvatar": "avatars/BaoThi.jpg",
+    "wish": ""
   },
   {
-    "id": 3,
-    "name": "Lê Thu Bình",
-    "avatar": "avatars/003.jpg",
-    "wish": "Chúc Bình một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "caongochan",
+    "name": "Cao Ngoc Han",
+    "avatar": "assets/members/caongochan.jpg",
+    "thumbnail": "assets/members/caongochan-thumb.jpg",
+    "sourceAvatar": "avatars/CaoNgocHan.jpg",
+    "wish": ""
   },
   {
-    "id": 4,
-    "name": "Phạm Ngọc Châu",
-    "avatar": "avatars/004.jpg",
-    "wish": "Chúc Châu một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "dongoc",
+    "name": "Do Ngoc",
+    "avatar": "assets/members/dongoc.jpg",
+    "thumbnail": "assets/members/dongoc-thumb.jpg",
+    "sourceAvatar": "avatars/DoNgoc.jpg",
+    "wish": ""
   },
   {
-    "id": 5,
-    "name": "Hoàng Khánh Chi",
-    "avatar": "avatars/005.jpg",
-    "wish": "Chúc Chi một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "giahan-uncf",
+    "name": "Gia Han",
+    "avatar": "assets/members/giahan-uncf.jpg",
+    "thumbnail": "assets/members/giahan-uncf-thumb.jpg",
+    "sourceAvatar": "avatars/GiaHan_uncf.jpg",
+    "wish": ""
   },
   {
-    "id": 6,
-    "name": "Vũ Thùy Dung",
-    "avatar": "avatars/006.jpg",
-    "wish": "Chúc Dung một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "gianghi",
+    "name": "Gia Nghi",
+    "avatar": "assets/members/gianghi.jpg",
+    "thumbnail": "assets/members/gianghi-thumb.jpg",
+    "sourceAvatar": "avatars/GiaNghi.jpg",
+    "wish": ""
   },
   {
-    "id": 7,
-    "name": "Đặng Hà Giang",
-    "avatar": "avatars/007.jpg",
-    "wish": "Chúc Giang một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "hothanhthao",
+    "name": "Ho Thanh Thao",
+    "avatar": "assets/members/hothanhthao.jpg",
+    "thumbnail": "assets/members/hothanhthao-thumb.jpg",
+    "sourceAvatar": "avatars/HoThanhThao.jpg",
+    "wish": ""
   },
   {
-    "id": 8,
-    "name": "Bùi Mai Hân",
-    "avatar": "avatars/008.jpg",
-    "wish": "Chúc Hân một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "hoaiphuc",
+    "name": "Hoai Phuc",
+    "avatar": "assets/members/hoaiphuc.png",
+    "thumbnail": "assets/members/hoaiphuc-thumb.png",
+    "sourceAvatar": "avatars/HoaiPhuc.png",
+    "wish": ""
   },
   {
-    "id": 9,
-    "name": "Đỗ Lan Hương",
-    "avatar": "avatars/009.jpg",
-    "wish": "Chúc Hương một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "hoaithuong",
+    "name": "Hoai Thuong",
+    "avatar": "assets/members/hoaithuong.png",
+    "thumbnail": "assets/members/hoaithuong-thumb.png",
+    "sourceAvatar": "avatars/HoaiThuong.png",
+    "wish": ""
   },
   {
-    "id": 10,
-    "name": "Ngô Phương Khánh",
-    "avatar": "avatars/010.jpg",
-    "wish": "Chúc Khánh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "khanhhuyen",
+    "name": "Khanh Huyen",
+    "avatar": "assets/members/khanhhuyen.png",
+    "thumbnail": "assets/members/khanhhuyen-thumb.png",
+    "sourceAvatar": "avatars/KhanhHuyen.png",
+    "wish": ""
   },
   {
-    "id": 11,
-    "name": "Dương Bảo Linh",
-    "avatar": "avatars/011.jpg",
-    "wish": "Chúc Linh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "lekhanhlinh-none",
+    "name": "Le Khanh Linh",
+    "avatar": "assets/members/lekhanhlinh-none.jpg",
+    "thumbnail": "assets/members/lekhanhlinh-none-thumb.jpg",
+    "sourceAvatar": "avatars/LeKhanhLinh_none.jpg",
+    "wish": ""
   },
   {
-    "id": 12,
-    "name": "Lý Diệu My",
-    "avatar": "avatars/012.jpg",
-    "wish": "Chúc My một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "minhnhi",
+    "name": "Minh Nhi",
+    "avatar": "assets/members/minhnhi.jpg",
+    "thumbnail": "assets/members/minhnhi-thumb.jpg",
+    "sourceAvatar": "avatars/MinhNhi.jpg",
+    "wish": ""
   },
   {
-    "id": 13,
-    "name": "Võ Thanh Nga",
-    "avatar": "avatars/013.jpg",
-    "wish": "Chúc Nga một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "minhthu",
+    "name": "Minh Thu",
+    "avatar": "assets/members/minhthu.jpg",
+    "thumbnail": "assets/members/minhthu-thumb.jpg",
+    "sourceAvatar": "avatars/MinhThu.jpg",
+    "wish": ""
   },
   {
-    "id": 14,
-    "name": "Phan Kim Ngân",
-    "avatar": "avatars/014.jpg",
-    "wish": "Chúc Ngân một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "mykim",
+    "name": "My Kim",
+    "avatar": "assets/members/mykim.jpg",
+    "thumbnail": "assets/members/mykim-thumb.jpg",
+    "sourceAvatar": "avatars/MyKim.jpg",
+    "wish": ""
   },
   {
-    "id": 15,
-    "name": "Trịnh Hồng Nhung",
-    "avatar": "avatars/015.jpg",
-    "wish": "Chúc Nhung một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "namtien",
+    "name": "Nam Tien",
+    "avatar": "assets/members/namtien.png",
+    "thumbnail": "assets/members/namtien-thumb.png",
+    "sourceAvatar": "avatars/NamTien.png",
+    "wish": ""
   },
   {
-    "id": 16,
-    "name": "Huỳnh Gia Như",
-    "avatar": "avatars/016.jpg",
-    "wish": "Chúc Như một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nguyenthanhthao",
+    "name": "Nguyen Thanh Thao",
+    "avatar": "assets/members/nguyenthanhthao.jpg",
+    "thumbnail": "assets/members/nguyenthanhthao-thumb.jpg",
+    "sourceAvatar": "avatars/NguyenThanhThao.jpg",
+    "wish": ""
   },
   {
-    "id": 17,
-    "name": "Mai Thảo Nguyên",
-    "avatar": "avatars/017.jpg",
-    "wish": "Chúc Nguyên một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nguyentrieuvy",
+    "name": "Nguyen Trieu Vy",
+    "avatar": "assets/members/nguyentrieuvy.jpg",
+    "thumbnail": "assets/members/nguyentrieuvy-thumb.jpg",
+    "sourceAvatar": "avatars/NguyenTrieuVy.jpg",
+    "wish": ""
   },
   {
-    "id": 18,
-    "name": "Tô Yến Oanh",
-    "avatar": "avatars/018.jpg",
-    "wish": "Chúc Oanh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nguyentuyen",
+    "name": "Nguyen Tuyen",
+    "avatar": "assets/members/nguyentuyen.jpg",
+    "thumbnail": "assets/members/nguyentuyen-thumb.jpg",
+    "sourceAvatar": "avatars/NguyenTuyen.jpg",
+    "wish": ""
   },
   {
-    "id": 19,
-    "name": "Châu Bích Phượng",
-    "avatar": "avatars/019.jpg",
-    "wish": "Chúc Phượng một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nhatuyen",
+    "name": "Nhat Uyen",
+    "avatar": "assets/members/nhatuyen.jpg",
+    "thumbnail": "assets/members/nhatuyen-thumb.jpg",
+    "sourceAvatar": "avatars/NhatUyen.jpg",
+    "wish": ""
   },
   {
-    "id": 20,
-    "name": "Lâm Quỳnh Trang",
-    "avatar": "avatars/020.jpg",
-    "wish": "Chúc Trang một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nhule",
+    "name": "Nhu Le",
+    "avatar": "assets/members/nhule.jpg",
+    "thumbnail": "assets/members/nhule-thumb.jpg",
+    "sourceAvatar": "avatars/NhuLe.jpg",
+    "wish": ""
   },
   {
-    "id": 21,
-    "name": "Đinh Thu Thủy",
-    "avatar": "avatars/021.jpg",
-    "wish": "Chúc Thủy một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nhuquynh",
+    "name": "Nhu Quynh",
+    "avatar": "assets/members/nhuquynh.jpg",
+    "thumbnail": "assets/members/nhuquynh-thumb.jpg",
+    "sourceAvatar": "avatars/NhuQuynh.jpg",
+    "wish": ""
   },
   {
-    "id": 22,
-    "name": "Cao Tuyết Vy",
-    "avatar": "avatars/022.jpg",
-    "wish": "Chúc Vy một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "nhuxuan",
+    "name": "Nhu Xuan",
+    "avatar": "assets/members/nhuxuan.jpg",
+    "thumbnail": "assets/members/nhuxuan-thumb.jpg",
+    "sourceAvatar": "avatars/NhuXuan.jpg",
+    "wish": ""
   },
   {
-    "id": 23,
-    "name": "Lương Ánh Xuân",
-    "avatar": "avatars/023.jpg",
-    "wish": "Chúc Xuân một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "phamhuuphuonganh",
+    "name": "Pham Huu Phuong Anh",
+    "avatar": "assets/members/phamhuuphuonganh.jpg",
+    "thumbnail": "assets/members/phamhuuphuonganh-thumb.jpg",
+    "sourceAvatar": "avatars/PhamHuuPhuongAnh.jpg",
+    "wish": ""
   },
   {
-    "id": 24,
-    "name": "Hồ Bảo Yến",
-    "avatar": "avatars/024.jpg",
-    "wish": "Chúc Yến một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "phamthimyanh",
+    "name": "Pham Thi My Anh",
+    "avatar": "assets/members/phamthimyanh.jpg",
+    "thumbnail": "assets/members/phamthimyanh-thumb.jpg",
+    "sourceAvatar": "avatars/PhamThiMyAnh.jpg",
+    "wish": ""
   },
   {
-    "id": 25,
-    "name": "Tạ Diễm Quỳnh",
-    "avatar": "avatars/025.jpg",
-    "wish": "Chúc Quỳnh một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "phungnghi",
+    "name": "Phung Nghi",
+    "avatar": "assets/members/phungnghi.jpg",
+    "thumbnail": "assets/members/phungnghi-thumb.jpg",
+    "sourceAvatar": "avatars/PhungNghi.jpg",
+    "wish": ""
   },
   {
-    "id": 26,
-    "name": "Kiều Mỹ Duyên",
-    "avatar": "avatars/026.jpg",
-    "wish": "Chúc Duyên một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "phuonganh",
+    "name": "Phuong Anh",
+    "avatar": "assets/members/phuonganh.png",
+    "thumbnail": "assets/members/phuonganh-thumb.png",
+    "sourceAvatar": "avatars/PhuongAnh.png",
+    "wish": ""
   },
   {
-    "id": 27,
-    "name": "Thái Hải Yến",
-    "avatar": "avatars/027.jpg",
-    "wish": "Chúc Yến một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "quynhnhu",
+    "name": "Quynh Nhu",
+    "avatar": "assets/members/quynhnhu.jpg",
+    "thumbnail": "assets/members/quynhnhu-thumb.jpg",
+    "sourceAvatar": "avatars/QuynhNhu.jpg",
+    "wish": ""
   },
   {
-    "id": 28,
-    "name": "Quách Ngọc Hà",
-    "avatar": "avatars/028.jpg",
-    "wish": "Chúc Hà một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "thanhhang",
+    "name": "Thanh Hang",
+    "avatar": "assets/members/thanhhang.jpg",
+    "thumbnail": "assets/members/thanhhang-thumb.jpg",
+    "sourceAvatar": "avatars/ThanhHang.jpg",
+    "wish": ""
   },
   {
-    "id": 29,
-    "name": "Nghiêm Thanh Tâm",
-    "avatar": "avatars/029.jpg",
-    "wish": "Chúc Tâm một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "thanhkhue",
+    "name": "Thanh Khue",
+    "avatar": "assets/members/thanhkhue.jpg",
+    "thumbnail": "assets/members/thanhkhue-thumb.jpg",
+    "sourceAvatar": "avatars/ThanhKhue.jpg",
+    "wish": ""
   },
   {
-    "id": 30,
-    "name": "Văn Cẩm Tú",
-    "avatar": "avatars/030.jpg",
-    "wish": "Chúc Tú một ngày 20/10 thật vui và ngập tràn yêu thương!"
+    "id": "thuvu",
+    "name": "Thu Vu",
+    "avatar": "assets/members/thuvu.jpg",
+    "thumbnail": "assets/members/thuvu-thumb.jpg",
+    "sourceAvatar": "avatars/ThuVu.jpg",
+    "wish": ""
+  },
+  {
+    "id": "tramy",
+    "name": "Tra My",
+    "avatar": "assets/members/tramy.jpg",
+    "thumbnail": "assets/members/tramy-thumb.jpg",
+    "sourceAvatar": "avatars/TraMy.jpg",
+    "wish": ""
+  },
+  {
+    "id": "tramanh",
+    "name": "Trâm Anh",
+    "avatar": "assets/members/tramanh.png",
+    "thumbnail": "assets/members/tramanh-thumb.png",
+    "sourceAvatar": "avatars/TrâmAnh.png",
+    "wish": ""
+  },
+  {
+    "id": "xuantai",
+    "name": "Xuan Tai",
+    "avatar": "assets/members/xuantai.jpg",
+    "thumbnail": "assets/members/xuantai-thumb.jpg",
+    "sourceAvatar": "avatars/XuanTai.jpg",
+    "wish": ""
   }
 ]

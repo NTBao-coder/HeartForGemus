@@ -15,9 +15,9 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory heart-2010
 Mở http://127.0.0.1:4173 trong trình duyệt. Đây là địa chỉ trên máy tính đang chạy server, chưa phải link công khai để tạo QR.
 
 - Luồng: trái tim ánh sáng → xoay/zoom tìm đốm sáng có tên → chạm mở thiệp → quay lại trái tim. Có danh sách tìm tên làm lối phụ.
-- `heart-2010/site-config.json` chọn file dữ liệu. Bản xem thử dùng `members-preview.json` với 25 tên/lời nhắn minh họa và ảnh PNG hiện có được dùng lặp để kiểm tra mật độ. Chưa gán ảnh vào tên thật.
-- Khi đã cập nhật đúng ảnh, tên và lời nhắn trong `members.json`, đổi `membersFile` thành `members.json` và `preview` thành `false`.
-- Ảnh gốc giữ trong `avatars/`; bản giảm kích thước và thumbnail giữ trong `assets/preview/`, vẫn giữ nền trong suốt.
+- `heart-2010/site-config.json` dùng `members.json` với 33 ảnh mới, mỗi ảnh ứng với một thành viên.
+- Tên hiển thị tạm lấy từ tên file (không tự đoán dấu tiếng Việt). Sửa `name` và `wish` trong `members.json` để hoàn thiện nội dung; khi `wish` trống, thiệp chỉ hiển thị lời chúc chung.
+- Ảnh gốc giữ trong `avatars/`; bản giảm kích thước và thumbnail ở `assets/members/`. `sourceAvatar` ghi rõ ảnh gốc tương ứng. Đã bỏ bộ ảnh và dữ liệu preview cũ.
 - Trang cần mạng để tải Three.js và font; nếu không có WebGL/Three.js, dùng hình tim tĩnh. Thiệp vẫn mở được.
 - QR chung và chọn tên không xác thực danh tính. Bất kỳ ai cũng có thể chạm một tên để xem thiệp tương ứng; dữ liệu thiệp trong website tĩnh không phải dữ liệu riêng tư được bảo vệ.
 

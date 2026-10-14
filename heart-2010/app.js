@@ -45,14 +45,14 @@
     $('heart-retry').hidden = true;
     $('status').textContent = 'Đang chuẩn bị những món quà…';
     try {
-      const configResponse = await fetch('site-config.json');
+      const configResponse = await fetch('site-config.json', { cache: 'no-cache' });
       if (!configResponse.ok) throw new Error('Could not load configuration');
       const config = await configResponse.json();
       $('preview-note').hidden = !config.preview;
-      const response = await fetch(config.membersFile || 'members.json');
+      const response = await fetch(config.membersFile || 'members.json', { cache: 'no-cache' });
       if (!response.ok) throw new Error('Could not load members');
       const data = await response.json();
-      if (!Array.isArray(data) || !data.length || data.some(m => !m.name || !m.avatar || !m.wish)) throw new Error('Invalid member data');
+      if (!Array.isArray(data) || !data.length || data.some(m => !m.name || !m.avatar || typeof m.wish !== 'string')) throw new Error('Invalid member data');
       members = data; render();
       window.gemusHeart.setMembers(members, member => { selected = member; openLetter(); });
       $('heart-status').textContent = config.preview ? `Bản xem thử ${members.length} người · Ảnh lặp, tên và lời nhắn minh họa` : 'Tìm đốm sáng mang tên bạn nhé.';
@@ -67,6 +67,7 @@
     if (!selected) return;
     $('letter-title').textContent = selected.name;
     $('personal-wish').textContent = selected.wish;
+    $('personal-note').hidden = !selected.wish.trim();
     const img = $('letter-photo');
     img.hidden = false; img.parentElement.classList.remove('missing-photo');
     img.alt = selected.name; imageFallback(img); img.src = selected.avatar;

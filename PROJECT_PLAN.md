@@ -67,3 +67,9 @@ export const heartMap = {
 - Sắp xếp nhãn theo tọa độ màn hình, tránh chồng tên/vùng chạm 44px; ưu tiên đốm đang tìm, phần phía sau không nhận chạm. Khi quá sát nhau, ẩn bớt điểm tương tác; xoay/zoom hoặc tìm nhanh để tiếp cận.
 - Tìm nhanh đưa đốm sáng ra phía trước, làm nổi bật, rồi chạm mở thiệp.
 - `node heart-2010/tests/layout.test.cjs` kiểm tra 25 điểm ở 4 viewport × 4 mức zoom. Đã qua kiểm tra tài nguyên, luồng thiệp và sự kiện zoom/kéo mô phỏng; chưa xác nhận trực quan trên thiết bị thật.
+
+### Cập nhật bộ ảnh thật (14/10)
+- Thay bộ preview 25 người bằng 33 mục trong `members.json`, không lặp ảnh.
+- Tên tạm lấy từ tên file; lời nhắn riêng để trống chờ người dùng soạn, giao diện ẩn phần này khi chưa có nội dung.
+- Ảnh mới đã được tạo bản nhẹ và thumbnail ở `assets/members`; giữ nguyên toàn bộ ảnh gốc.
+- Loại bỏ `members-preview.json` và `assets/preview`. Kiểm tra bố trí đã nâng lên 33 điểm.

@@ -1,4 +1,4 @@
 {
-  "membersFile": "members-preview.json",
-  "preview": true
+  "membersFile": "members.json",
+  "preview": false
 }
