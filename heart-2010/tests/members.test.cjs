@@ -2,7 +2,7 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=path.resolve(__dirname,'..'), members=JSON.parse(fs.readFileSync(path.join(root,'members.json')));
 class Element {
  constructor(){this.hidden=false;this.value='';this.children=[];this.events={};this.dataset={};this.classList={add(){},remove(){}};this.parentElement={classList:this.classList};}
- addEventListener(event,fn){this.events[event]=fn;} append(...nodes){nodes.forEach(n=>n.parentElement=this);this.children.push(...nodes);} replaceChildren(){this.children=[];}setAttribute(){}focus(){}
+ addEventListener(event,fn){this.events[event]=fn;} append(...nodes){nodes.forEach(n=>n.parentElement=this);this.children.push(...nodes);} replaceChildren(){this.children=[];}setAttribute(key,value){this[key]=value;}focus(){}
 }
 const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 const elements=Object.fromEntries([...html.matchAll(/id="([^"]+)"/g)].map(m=>[m[1],new Element()]));
@@ -19,7 +19,7 @@ setImmediate(()=>{
  assert.deepEqual([...sources].sort(),files.map(f=>'avatars/'+f).sort());
  members.forEach(m=>{
   for(const key of ['avatar','thumbnail','sourceAvatar']) assert.ok(fs.existsSync(path.join(root,m[key])),m[key]);
-  selectStar(m); assert.equal(body.dataset.view,'letter');assert.equal(elements['letter-title'].textContent,m.name);assert.equal(elements['letter-photo'].src,m.avatar);assert.equal(elements['personal-note'].hidden,!m.wish.trim());
+  selectStar(m); assert.equal(elements['letter-view'].style,`--portrait-color: ${m.palette[0]}; --portrait-secondary: ${m.palette[1]}`); assert.equal(body.dataset.view,'letter');assert.equal(elements['letter-title'].textContent,m.name);assert.equal(elements['letter-photo'].src,m.avatar);assert.equal(elements['personal-note'].hidden,!m.wish.trim());
   elements['letter-photo'].onerror();assert.equal(elements['letter-photo'].src,m.sourceAvatar);
   elements['close-letter'].events.click();assert.equal(body.dataset.view,'heart');
  });

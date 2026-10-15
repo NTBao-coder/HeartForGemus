@@ -74,6 +74,11 @@
   }
   function openLetter() {
     if (!selected) return;
+    // Only accept generated hex colors; reset both tokens on every selection.
+    const palette = Array.isArray(selected.palette) ? selected.palette : [];
+    const colors = ['#edb69e', '#d995b5'].map((fallback, index) =>
+      /^#[0-9a-f]{6}$/i.test(palette[index] || '') ? palette[index] : fallback);
+    $('letter-view').setAttribute('style', `--portrait-color: ${colors[0]}; --portrait-secondary: ${colors[1]}`);
     $('letter-title').textContent = selected.name;
     $('personal-wish').textContent = selected.wish;
     $('personal-note').hidden = !selected.wish.trim();

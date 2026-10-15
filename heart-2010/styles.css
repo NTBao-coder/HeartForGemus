@@ -74,3 +74,28 @@ body[data-view=letter]{overflow:hidden}
 /* Fallback names remain in normal flow when WebGL is unavailable. */
 .fallback .star-name{position:static;height:auto;min-height:34px;max-width:180px}
 .fallback .star-label{display:flex;flex:0 1 auto}
+
+/* Precomputed portrait colors tint the edges; copy sits on an opaque light panel. */
+.letter-screen{
+ --portrait-color:#edb69e;--portrait-secondary:#d995b5;
+ background:radial-gradient(ellipse at 8% 12%,var(--portrait-color),transparent 65%),
+ radial-gradient(ellipse at 96% 90%,var(--portrait-secondary),transparent 65%),#f6ebde;
+ color:#392827;
+}
+.letter .portrait-wrap{
+ background:linear-gradient(145deg,#fffaf3cc,transparent 65%),
+ linear-gradient(25deg,var(--portrait-color),var(--portrait-secondary));
+ border-color:#39282726;
+}
+.letter .portrait-caption,.letter .portrait-date{color:#594238}
+.letter-copy{
+ background:#fffaf3;border:1px solid #39282718;border-radius:24px;
+ padding:clamp(24px,3vw,36px);box-shadow:0 12px 48px #39282708;
+}
+.letter-copy .eyebrow,.personal span{color:#72513f}
+.letter .primary{background:#edb69e;color:#322020}
+.letter .primary:hover{background:#f5c6ad}
+.letter .primary:focus-visible{outline-color:#72513f}
+.letter-screen .close:focus-visible{outline-color:#72513f}
+@media(max-width:820px){.letter{padding-left:18px;padding-right:18px}.letter-copy{padding:24px 20px}.letter .portrait-wrap{max-width:360px}}
+@media(max-width:360px){.letter{padding-left:12px;padding-right:12px}.letter-copy{padding:22px 18px}}

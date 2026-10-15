@@ -56,3 +56,7 @@ Công việc tiếp theo:
 Ảnh tối ưu đã được lưu trong Git, máy khác có thể chạy web ngay. Script đồng bộ ảnh dùng `sips` của macOS; Windows/Linux vẫn chạy web và sửa tên/lời chúc bình thường, nhưng cần thay công cụ xử lý ảnh nếu muốn chạy lại script.
 
 GitHub Pages tự triển khai khi push nhánh `main`. Nếu tab còn hiển thị bản cũ, tải lại trang. Đã xác nhận trực tiếp trên Safari: danh sách 33 người và thiệp An Tran dùng ảnh mới; kiểm tra toàn diện trên điện thoại vẫn còn cần thực hiện.
+
+## Gradient theo ảnh thành viên
+
+Mỗi thiệp dùng hai màu pastel lấy sẵn từ ảnh, với vùng nội dung màu sáng cố định để chữ luôn rõ. Sau khi cập nhật ảnh, chạy `python3 heart-2010/scripts/sync-palettes.py` (cần Pillow: `python3 -m pip install Pillow`). Màu được lưu trong trường `palette` của `members.json`; trang không phải phân tích ảnh khi mở thiệp. Nếu thiếu palette, trang dùng màu Gemus mặc định.
