@@ -13,9 +13,9 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'app.js'),'utf8'),{
  fetch:async file=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,file)))})
 });
 setImmediate(()=>{
- assert.equal(members.length,33);assert.equal(elements.members.children.length,33);
- const sources=new Set(members.map(m=>m.sourceAvatar));assert.equal(sources.size,33);
  const files=fs.readdirSync(path.join(root,'avatars')).filter(f=>/\.(png|jpe?g)$/i.test(f));
+ assert.equal(members.length,files.length);assert.equal(elements.members.children.length,files.length);
+ const sources=new Set(members.map(m=>m.sourceAvatar));assert.equal(sources.size,files.length);
  assert.deepEqual([...sources].sort(),files.map(f=>'avatars/'+f).sort());
  members.forEach(m=>{
   for(const key of ['avatar','thumbnail','sourceAvatar']) assert.ok(fs.existsSync(path.join(root,m[key])),m[key]);
@@ -25,5 +25,5 @@ setImmediate(()=>{
  });
  elements.search.value='Pham Huu Phuong Anh';elements.search.events.input();assert.equal(elements.members.children.length,1);
  selectStar(members[0]);assert.equal(elements['letter-photo'].hidden,false);
- console.log('PASS: all 33 sources covered; each star opens its own name/photo, fallback, empty wish, close, search, and next selection.');
+ console.log(`PASS: all ${files.length} sources covered; each star opens its own name/photo, fallback, empty wish, close, search, and next selection.`);
 });
