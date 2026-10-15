@@ -6,6 +6,7 @@ import json
 import re
 import subprocess
 import unicodedata
+from PIL import Image, ImageOps
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -28,9 +29,16 @@ for photo in files:
     member['sourceAvatar'] = source
     digest = hashlib.sha256(photo.read_bytes()).hexdigest()[:12]
     for key, size in [('avatar', 1000), ('thumbnail', 180)]:
-        dest = output / f'{identity}-{digest}-{size}{photo.suffix.lower()}'
+        extension = '.webp' if key == 'avatar' else photo.suffix.lower()
+        dest = output / f'{identity}-{digest}-{size}{extension}'
         if not dest.exists():
-            subprocess.run(['sips', '-Z', str(size), str(photo), '--out', str(dest)], check=True, capture_output=True)
+            if key == 'avatar':
+                with Image.open(photo) as image:
+                    image = ImageOps.exif_transpose(image).convert('RGBA')
+                    image.thumbnail((size, size), Image.Resampling.LANCZOS)
+                    image.save(dest, 'WEBP', quality=84, method=6)
+            else:
+                subprocess.run(['sips', '-Z', str(size), str(photo), '--out', str(dest)], check=True, capture_output=True)
         keep.add(dest)
         member[key] = dest.relative_to(root).as_posix()
     result.append(member)
@@ -38,6 +46,6 @@ assert len({m['id'] for m in result}) == len(result), 'Duplicate member IDs'
 manifest.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
 # Only generated images in this dedicated output directory are pruned.
 for path in output.iterdir():
-    if path.is_file() and path.suffix.lower() in {'.png', '.jpg', '.jpeg'} and path not in keep:
+    if path.is_file() and path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.webp'} and path not in keep:
         path.unlink()
 print(f'Synced {len(result)} photos; existing names and wishes preserved.')

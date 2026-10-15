@@ -11,12 +11,12 @@ function contrast(a, b) {
   const [dark, light] = [luminance(a), luminance(b)].sort((x, y) => x - y);
   return (light + .05) / (dark + .05);
 }
-const pairs = [['#392827', '#fffaf3'], ['#72513f', '#fffaf3'], ['#322020', '#edb69e']];
+const pairs = [['#392827', '#fffaf3'], ['#654735', '#fffaf3'], ['#322020', '#edb69e']];
 for (const member of members) {
   assert.equal(member.palette.length, 2, member.name);
   for (const color of member.palette) {
     assert.match(color, /^#[a-f0-9]{6}$/i);
-    pairs.push(['#594238', color]);
+    for (const text of ['#594238', '#392827', '#654735']) pairs.push([text, color]);
   }
 }
 const minimum = Math.min(...pairs.map(([text, background]) => contrast(text, background)));

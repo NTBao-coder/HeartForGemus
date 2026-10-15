@@ -28,7 +28,9 @@ Kiểm tra bố trí nhãn: `node heart-2010/tests/layout.test.cjs`. Tìm nhanh 
 Sau khi thay ảnh trong `heart-2010/avatars`, chạy trên macOS:
 
 ```sh
+python3 -m pip install Pillow
 python3 heart-2010/scripts/sync-members.py
+python3 heart-2010/scripts/sync-palettes.py
 node heart-2010/tests/members.test.cjs
 node heart-2010/tests/layout.test.cjs
 ```
@@ -60,3 +62,9 @@ GitHub Pages tự triển khai khi push nhánh `main`. Nếu tab còn hiển th�
 ## Gradient theo ảnh thành viên
 
 Mỗi thiệp dùng hai màu pastel lấy sẵn từ ảnh, với vùng nội dung màu sáng cố định để chữ luôn rõ. Sau khi cập nhật ảnh, chạy `python3 heart-2010/scripts/sync-palettes.py` (cần Pillow: `python3 -m pip install Pillow`). Màu được lưu trong trường `palette` của `members.json`; trang không phải phân tích ảnh khi mở thiệp. Nếu thiếu palette, trang dùng màu Gemus mặc định.
+
+## Thiệp điện thoại và tải đồng thời
+
+Thiệp điện thoại dùng bố cục bưu thiếp một cột, ảnh giữ trọn khung hình và lời chúc cỡ 15px. Ảnh thiệp được tạo sẵn ở định dạng WebP (tối đa 1000px); ảnh gốc giữ trong `avatars/` để dự phòng. Trình duyệt chỉ tải ảnh thiệp được chọn, không tải trước toàn bộ ảnh lớn. Hiệu ứng tim dừng vẽ khi đọc thiệp; hoa cũng tạm dừng trên điện thoại.
+
+Website tĩnh trên GitHub Pages không có phiên máy chủ hay cơ sở dữ liệu chung. 40 người có thể mở thiệp độc lập; tốc độ còn phụ thuộc mạng, dịch vụ phân phối tệp/font và thiết bị. Kiểm tra tải local không thay thế bảo đảm hiệu năng của dịch vụ công khai.
